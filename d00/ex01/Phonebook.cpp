@@ -6,7 +6,7 @@
 /*   By: bogoncha <bogoncha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 18:34:03 by bogoncha          #+#    #+#             */
-/*   Updated: 2019/10/21 18:13:05 by bogoncha         ###   ########.fr       */
+/*   Updated: 2019/10/22 13:15:56 by bogoncha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void Phonebook::search_contact(void) const{
     while (++i < this->_nb_contcts)
         this->_contacts[i].print_preview(i);
     std::cout << std::endl << "Put the index: ";
-    std::getline(std::cin, inp);
+    std::cin >> inp;
     try {
         
         i = std::stoi(inp);

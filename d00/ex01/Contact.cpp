@@ -6,7 +6,7 @@
 /*   By: bogoncha <bogoncha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 17:33:30 by bogoncha          #+#    #+#             */
-/*   Updated: 2019/10/21 18:12:31 by bogoncha         ###   ########.fr       */
+/*   Updated: 2019/10/22 13:15:02 by bogoncha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,76 +71,76 @@ void Contact::print_contact(void) const {
 void Contact::set_first_name(void) {
     std::string inp;
     std::cout << "Please insert first name: " << std::endl;
-    std::getline(std::cin, inp);
+    std::cin >> inp;
     this->_first_name = inp;
 }
 
 void Contact::set_last_name(void) {
     std::string inp;
     std::cout << "Please insert last name: " << std::endl;
-    std::getline(std::cin, inp);
+    std::cin >> inp;
     this->_last_name = inp;
 }
 
 void Contact::set_nickname(void) {
     std::string inp;
     std::cout << "Please insert nickname: " << std::endl;
-    std::getline(std::cin, inp);
+    std::cin >> inp;
     this->_nickname = inp;
 }
 
 void Contact::set_login(void) {
     std::string inp;
     std::cout << "Please insert login: " << std::endl;
-    std::getline(std::cin, inp);
+    std::cin >> inp;
     this->_login = inp;
 }
 
 void Contact::set_postal_address(void) {
     std::string inp;
     std::cout << "Please postal address: " << std::endl;
-    std::getline(std::cin, inp);
+    std::cin >> inp;
     this->_postal_address = inp;
 }
 
 void Contact::set_email_address(void) {
     std::string inp;
     std::cout << "Please email address: " << std::endl;
-    std::getline(std::cin, inp);
+    std::cin >> inp;
     this->_email_address = inp;
 }
 
 void Contact::set_phone_number(void) {
     std::string inp;
     std::cout << "Please phone number: " << std::endl;
-    std::getline(std::cin, inp);
+   std::cin >> inp;
     this->_phone_number = inp;
 }
 
 void Contact::set_birthday_date(void) {
     std::string inp;
     std::cout << "Please birthday date: " << std::endl;
-    std::getline(std::cin, inp);
+    std::cin >> inp;
     this->_birthday_date = inp;
 }
 
 void Contact::set_favorite_meal(void) {
     std::string inp;
     std::cout << "Please favorite meal: " << std::endl;
-    std::getline(std::cin, inp);
+    std::cin >> inp;
     this->_favorite_meal = inp;
 }
 
 void Contact::set_underwear_color(void) {
     std::string inp;
     std::cout << "Please underwear color: " << std::endl;
-    std::getline(std::cin, inp);
+    std::cin >> inp;
     this->_underwear_color = inp;
 }
 
 void Contact::set_darkest_secret(void) {
     std::string inp;
     std::cout << "Please darkest secret: " << std::endl;
-    std::getline(std::cin, inp);
+    std::cin >> inp;
     this->_darkest_secret = inp;
 }
