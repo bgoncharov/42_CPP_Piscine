@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bogoncha <bogoncha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/21 15:51:54 by bogoncha          #+#    #+#             */
-/*   Updated: 2019/10/23 16:18:24 by bogoncha         ###   ########.fr       */
+/*   Created: 2019/10/22 13:57:31 by bogoncha          #+#    #+#             */
+/*   Updated: 2019/10/22 14:19:55 by bogoncha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
+# include <string>
+# include <iostream>
 
-class ZombieEvent {
-public:
-    ZombieEvent(void);
-    ~ZombieEvent(void);
-    void    setZombieType(std::string type);
-    Zombie*  newZombie(std::string name) const;
-    void    randomChump(void) const;
-private:
-    std::string _zombieType;
-    std::string _name_pool[10];
+class Brain {
+    
+    public:
+        Brain(void);
+        ~Brain(void);
+        std::string identify(void) const;
 };
+
+#endif

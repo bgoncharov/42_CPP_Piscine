@@ -6,7 +6,7 @@
 /*   By: bogoncha <bogoncha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 17:30:08 by bogoncha          #+#    #+#             */
-/*   Updated: 2019/10/21 17:57:40 by bogoncha         ###   ########.fr       */
+/*   Updated: 2019/10/23 16:23:10 by bogoncha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 
 ZombieHorde::ZombieHorde(int N) {
     Zombie *zombies = new Zombie[N];
-    std::string names[] = {"BITERS", "COLD BODIES", "CREEPERS", "DEAD ONES",
-							"FLOATERS", "GEEKS", "LAMEBRAINS", "LURKERS",
-							"WALKERS", "STINKERS"};
+    std::string names[] = {"Biters", "Cold", "Creepers", "Dead", "Floaters", 
+	 						"Geeks", "Lamebrains", "Lurkers", "Walkers", "Stinkers"};
     for (int i = 0; i < N; i++) {
         zombies[i].set_name(names[rand() % 10]);
         zombies[i].set_type("Default");

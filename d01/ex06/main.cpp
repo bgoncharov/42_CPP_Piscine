@@ -5,32 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bogoncha <bogoncha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/21 16:54:21 by bogoncha          #+#    #+#             */
-/*   Updated: 2019/10/23 16:21:58 by bogoncha         ###   ########.fr       */
+/*   Created: 2019/10/22 14:50:23 by bogoncha          #+#    #+#             */
+/*   Updated: 2019/10/23 14:41:22 by bogoncha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ZombieEvent.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
+#include "Weapon.hpp"
 
-int main(void)
+int main()
 {
-    ZombieEvent *event = new ZombieEvent();
-    Zombie      *zombie1;
-    Zombie      *zombie2;
-
-    event->setZombieType("Runner");
-    zombie1 = event->newZombie("Felix");
-    zombie2 = event->newZombie("Karl");
-
-    zombie1->announce();
-    delete zombie1;
-    event->randomChump();
-    zombie2->announce();
-    zombie2->set_name("Gustav");
-    zombie2->set_type("Killer");
-    zombie2->announce();
-    delete zombie2;
-
-    //system("leaks -q zombie");
-    return (0);
+    {
+        Weapon club = Weapon("crude spiked club");
+        HumanA bob("Bob", club);
+        bob.attack();
+        club.setType("some other type of club");
+        bob.attack();
+    }
+    {
+        Weapon club = Weapon("crude spiked club");
+        HumanB jim("Jim");
+        jim.setWeapon(club);
+        jim.attack();
+        club.setType("some other type of club");
+        jim.attack();
+    }
 }

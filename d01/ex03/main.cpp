@@ -6,7 +6,7 @@
 /*   By: bogoncha <bogoncha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 17:54:09 by bogoncha          #+#    #+#             */
-/*   Updated: 2019/10/21 17:55:45 by bogoncha         ###   ########.fr       */
+/*   Updated: 2019/10/22 13:53:57 by bogoncha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ int main(void)
     zh->announce();
     delete zh;
     
-    system("leaks -q a.out");
+    //system("leaks -q zombie");
     return (0);
 }

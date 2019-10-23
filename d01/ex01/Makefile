@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: bogoncha <bogoncha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/10/21 17:00:53 by bogoncha          #+#    #+#              #
-#    Updated: 2019/10/23 16:17:48 by bogoncha         ###   ########.fr        #
+#    Created: 2019/10/23 14:46:21 by bogoncha          #+#    #+#              #
+#    Updated: 2019/10/23 16:01:45 by bogoncha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombie
+NAME = ex01
 FLAGS = -Wall -Werror -Wextra
 
 SRCS = $(wildcard *.cpp)

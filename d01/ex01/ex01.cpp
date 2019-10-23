@@ -6,7 +6,7 @@
 /*   By: bogoncha <bogoncha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 15:20:38 by bogoncha          #+#    #+#             */
-/*   Updated: 2019/10/21 15:22:30 by bogoncha         ###   ########.fr       */
+/*   Updated: 2019/10/23 16:03:01 by bogoncha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int main(void)
 {
     memoryLeak();
 
-    system("leaks -q a.out");
+    //system("leaks -q ex01");
     return (0);
 }

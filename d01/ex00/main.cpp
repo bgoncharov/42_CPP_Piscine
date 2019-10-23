@@ -6,7 +6,7 @@
 /*   By: bogoncha <bogoncha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 15:03:57 by bogoncha          #+#    #+#             */
-/*   Updated: 2019/10/21 17:05:32 by bogoncha         ###   ########.fr       */
+/*   Updated: 2019/10/23 16:01:21 by bogoncha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ int main(void)
     ponyOnTheHeap();
     ponyOnTheStack();
 
-    //system("leaks -q a.out");
+    //system("leaks -q pony");
     return (0);
 }
