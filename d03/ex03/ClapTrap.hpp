@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bogoncha <bogoncha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/24 16:44:59 by bogoncha          #+#    #+#             */
-/*   Updated: 2019/10/25 10:55:21 by bogoncha         ###   ########.fr       */
+/*   Created: 2019/10/25 10:23:32 by bogoncha          #+#    #+#             */
+/*   Updated: 2019/10/25 15:29:25 by bogoncha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 # include <string>
 # include <iostream>
 # include <ctime>
 # include <cstdlib>
 
-class FragTrap{
+class ClapTrap{
 
     public:
         //Constructors and Destructors
-        FragTrap(std::string name);
-        FragTrap(FragTrap const &src);
-        ~FragTrap(void);
+        ClapTrap(int hitPoints, int maxHitPoints,
+            int energyPoints, int maxEnergyPoints,
+            int level, std::string name, int meleeAttackDamage,
+            int rangedAttackDamage, int fartAttackDamage,
+            int danceAttackDamage, int peanutButterAttackDamage,
+            int bubblesAttackDamage, int ticklesAttackDamage,
+            int armorDamageReduction, std::string type);
+        ClapTrap(ClapTrap const &src);
+        virtual ~ClapTrap(void);
 
         //Operators overload
-        FragTrap &operator=(FragTrap const &rhs);
+        ClapTrap &operator=(ClapTrap const &rhs);
 
         //Getter and setters
         int getHitPoints(void) const;
@@ -43,12 +49,12 @@ class FragTrap{
         int getTicklesAttackDamage(void) const;
         int getArmorDamageReduction(void) const;
         std::string getName(void) const;
+        std::string getType(void) const;
 
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
 
         //Attacks
-        void vaulhunter_dot_exe(std::string const &target);
         void rangedAttack(std::string const &target) const;
         void meleeAttack(std::string const &target) const;
         void coltAttack(std::string const &target) const;
@@ -58,8 +64,8 @@ class FragTrap{
         void ticklesAttack(std::string const &target) const;
 
     
-    private:
-        FragTrap(void);
+    protected:
+        ClapTrap(void);
         
         int _hitPoints;
         int _maxHitPoints;
@@ -75,8 +81,7 @@ class FragTrap{
         int _boboAttackDamage;
         int _ticklesAttackDamage;
         int _armorDamageReduction;
-
-        static int const _nAttacks;
+        std::string _type;
 };
 
 #endif
