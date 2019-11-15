@@ -6,13 +6,12 @@
 /*   By: bogoncha <bogoncha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 12:47:23 by bogoncha          #+#    #+#             */
-/*   Updated: 2019/10/29 21:05:58 by bogoncha         ###   ########.fr       */
+/*   Updated: 2019/11/15 09:06:32 by bogoncha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-/* Constructors */
 Bureaucrat::Bureaucrat(void) {
 	return ;
 }
@@ -32,12 +31,10 @@ Bureaucrat::Bureaucrat(Bureaucrat const &src) : _name(src.getName()) {
 	return ;
 }
 
-/* Destructor */
 Bureaucrat::~Bureaucrat(void) {
 	return ;
 }
 
-/* Operator */
 Bureaucrat	&Bureaucrat::operator=(Bureaucrat const &rhs) {
 	this->_grade = rhs.getGrade();
 	return *this;
@@ -47,8 +44,6 @@ std::ostream	&operator<<(std::ostream &o, Bureaucrat const &rhs) {
 	o << rhs.getName() << ", bureaucrat grade " << rhs.getGrade();
 	return o;
 }
-
-/* Getters and Setters */
 const std::string	Bureaucrat::getName(void) const {
 	return this->_name;
 }
@@ -64,8 +59,6 @@ void	Bureaucrat::setGrade(int grade) {
 	}
 	this->_grade = grade;
 }
-
-/* Functions */
 
 void	Bureaucrat::incrementGrade(int increment) {
 	if (increment < 0)
@@ -98,9 +91,6 @@ void	Bureaucrat::executeAForm(AForm const &form) {
 	}
 }
 
-
-/* Exceptions */
-
 Bureaucrat::GradeTooHighException::GradeTooHighException(void) {
 	return ;
 }
@@ -121,18 +111,15 @@ const char	*Bureaucrat::GradeTooHighException::what(void) const throw() {
 	return "The grade that is going to be set is to high!";
 }
 
-/* Constructors */
 Bureaucrat::GradeTooLowException::GradeTooLowException(void) {
 	return ;
 }
 Bureaucrat::GradeTooLowException::GradeTooLowException(Bureaucrat::GradeTooLowException const &) {
 return ;
 }
-/* Destructor */
 Bureaucrat::GradeTooLowException::~GradeTooLowException(void) throw() {
 	return ;
 }
-/* Operator */
 Bureaucrat::GradeTooLowException	&Bureaucrat::GradeTooLowException::operator=(Bureaucrat::GradeTooLowException const &) {
 	return *this;
 }
